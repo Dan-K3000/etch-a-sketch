@@ -13,15 +13,14 @@ createGrid(16, 16);
 
 const pixels = document.querySelectorAll('.cell');
 
-pixels.forEach((pixel) => {
-  pixel.addEventListener('click', (e) => {
+pixels.forEach((cell) => {
+  cell.addEventListener('mouseover', (e) => {
     const pixel = e.target;
     if(pixel.getAttribute('style') != 'background: black;'){
       pixel.setAttribute('style', 'background: black;');
     }
     else{
       pixel.removeAttribute('style');
-
     }
   });
 });
